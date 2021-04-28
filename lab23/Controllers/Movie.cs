@@ -5,6 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using lab23.Repositories;
 using lab23.Models;
+using lab23.Data;
+using Microsoft.EntityFrameworkCore;
+using jdk.nashorn.@internal.objects.annotations;
 
 namespace lab23.Controllers
 {
@@ -43,5 +46,25 @@ namespace lab23.Controllers
             await _repository.Create(model);
             return RedirectToAction("Index");
         }
+        //public IActionResult SearchResultGenre(MovieViewModel model)
+        //{
+        //    return View();
+        //}
+        //public IActionResult SearchResultTitle(MovieViewModel model)
+        //{
+        //    return View();
+        //}
+        //public async Task<IActionResult> Index(MovieViewModel model)
+        //{
+        //    await _repository.Get().Where(x => x.Genre == model.Genre);
+        //    return View();
+
+        //}
+        //public async Task<IActionResult> Index(MovieViewModel model)
+        //{
+        //    await _repository.Get().Where(x => x.Title == model.Title);
+        //    return View();
+
+        //}
     }
 }
